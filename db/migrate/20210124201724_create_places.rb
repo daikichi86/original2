@@ -5,6 +5,8 @@ class CreatePlaces < ActiveRecord::Migration[6.0]
       t.text :info,              null: false
 
       t.timestamps
+
+      t.references :user, null: false, foreign_key: true
     end
   end
 end

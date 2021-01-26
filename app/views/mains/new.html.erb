@@ -52,7 +52,7 @@
           </div>
           <div class="click-upload">
             <p>クリックしてファイルをアップロード</p>
-            <%= image_tag message.image, id: 'item-image' if message.image.attached? %>
+            <%# image_tag place.image, id: 'item-image' if place.image.attached? %>
             <%= f.file_field :image, id:"item-image" %>
           </div>
         </div>
