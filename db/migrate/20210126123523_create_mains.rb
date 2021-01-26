@@ -1,6 +1,6 @@
-class CreatePlaces < ActiveRecord::Migration[6.0]
+class CreateMains < ActiveRecord::Migration[6.0]
   def change
-    create_table :places do |t|
+    create_table :mains do |t|
       t.string :name,              null: false
       t.text :info,              null: false
 

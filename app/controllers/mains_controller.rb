@@ -3,20 +3,20 @@ class MainsController < ApplicationController
   end
 
   def new
-    @place = Place.new
+    @main = Main.new
   end
 
   def create
-    @place = Place.new(place_params)
-    if @place.valid?
-      @place.save
+    @main = Main.new(main_params)
+    if @main.valid?
+      @main.save
       redirect_to root_path
     else
       render action: :new
     end
   end
 
-  def place_params
-    params.require(:place).permit(:name, :info, :image).merge(user_id: current_user.id)
+  def main_params
+    params.require(:main).permit(:name, :info, :image).merge(user_id: current_user.id)
   end
 end
