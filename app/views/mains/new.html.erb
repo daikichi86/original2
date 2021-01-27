@@ -57,15 +57,17 @@
           </div>
       <%# 場所と場所の詳細 %>
           <div class="weight-bold-text">
-            場所名
+            場所
             <span class="indispensable">必須</span>
           </div>
   
           <%= f.text_area :name, class:"single-input-primary", id:"item-name", placeholder:"場所の名前（必須 20文字まで)", maxlength:"20" %>
   
           <div class="weight-bold-text">
-            場所の説明
+            <div class="info-text">
+              場所の詳細
             <span class="indispensable">必須</span>
+            </div>
           </div>
   
           <%= f.text_area :info, class:"single-input-primary", id:"item-info", placeholder:"どんな場面なのか詳細を書いてみよう。" ,rows:"7" ,maxlength:"1000" %>

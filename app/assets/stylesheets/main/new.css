@@ -39,6 +39,10 @@
   margin-bottom: 10px;
 }
 
+.info-text{
+  margin-top: 10px;
+}
+
 /* 投稿画像 */
 .img-upload {
   justify-content: space-between;
@@ -54,25 +58,29 @@
 .sell-btn-contents {
   width: 100%;
   text-align: center;
+  display:flex;
+  flex-direction: column;
+  align-items:center;
 }
 
 .sell-btn {
   background: #ea352d;
   border: 1px solid #ea352d;
   color: #fff;
-  width: 100%;
+  width: 200px;
   height: 50px;
   font-size: 14px;
-  margin-bottom: 4vh;
+  margin-bottom: 10px;
   border-radius: 20px;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .back-btn {
   background: #aaa;
   border: 1px solid #aaa;
   color: #fff;
-  padding: 15px 35%;
+  width: 200px;
+  padding: 15px;
   text-decoration: none;
   border-radius: 20px;
 }
