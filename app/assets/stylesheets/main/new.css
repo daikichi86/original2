@@ -6,10 +6,11 @@
   align-items: center;
   flex-direction: column;
   min-width: 500px;
+  background-image: url("../../assets/hero/h1_hero.jpg");
+  color: #fff;
 }
 
 .mains-sell-main {
-  background-color: #FFF;
   width: 70vw;
   min-width: 450px;
   padding: 10vh 15vw;
@@ -19,6 +20,7 @@
   font-size: 22px;
   font-weight: bold;
   text-align: center;
+  color: #fff;
 }
 
 .indispensable {
@@ -44,19 +46,9 @@
   padding: 2vh 0;
 }
 
-.mains-detail {
-  display: flex;
-  justify-content: space-between;
-  padding: 2vh 0;
-}
-
-.mains-detail>.form {
-  width: 300px;
-  padding: 2vh 0;
-}
-
-.select-box {
-  margin: 2vh 0;
+.click-upload{
+  color: #fff;
+  font-size: 18px;
 }
 
 .sell-btn-contents {
@@ -72,6 +64,8 @@
   height: 50px;
   font-size: 14px;
   margin-bottom: 4vh;
+  border-radius: 20px;
+  margin-top: 15px;
 }
 
 .back-btn {
@@ -80,4 +74,5 @@
   color: #fff;
   padding: 15px 35%;
   text-decoration: none;
+  border-radius: 20px;
 }
