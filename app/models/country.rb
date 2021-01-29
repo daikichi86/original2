@@ -1,4 +1,4 @@
-class Category < ActiveHash::Base
+class Country < ActiveHash::Base
 
   self.data = [
                {id: 0, name: '--'}, {id: 1, name: 'アイスランド共和国'}, {id: 2, name: 'アイルランド'}, 
