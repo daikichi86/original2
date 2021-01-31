@@ -55,23 +55,15 @@
                                     <nav>
                                         <ul id="navigation">                                                                                                                                     
                                             <li><a href="index.html">Home</a></li>
-                                            <li><a href="#">Page</a>
-                                                <ul class="submenu">
-                                                    <li><a href="blog.html">Blog</a></li>
-                                                    <li><a href="blog_details.html">Blog Details</a></li>
-                                                    <li><a href="elements.html">Element</a></li>
-                                                    <li><a href="listing_details.html">Listing details</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="contact.html">Contact</a></li>
-                                            <li class="add-list"><a href="listing_details.html"><i class="ti-plus"></i> add Listing</a></li>
+                                            <li><a href="#"></a></li>
+                                            <li><%= link_to 'Posted page',pages_path%></li>
                                             <li class="login">
                                                 <% if user_signed_in? %>
                                                     <li><%= link_to current_user.nickname, "#", class: "user-nickname" %></li>
-                                                    <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
+                                                    <li><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "logout" %></li>
                                                 <% else %>
-                                                    <li><%= link_to 'ログイン', new_user_session_path, class: "login2" %></li>
-                                                    <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+                                                    <li><%= link_to 'Login', new_user_session_path, class: "login2" %></li>
+                                                    <li><%= link_to 'Sign up', new_user_registration_path, class: "sign-up" %></li>
                                                 <% end %>
                                             </li>
                                         </ul>
@@ -124,7 +116,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
         <!--Hero Area End-->
@@ -370,147 +361,6 @@
                 </div>
             </div>
         </div>
-        <!-- peoples-visit End -->
-        <!-- Testimonial Start -->
-        <%#div class="testimonial-area testimonial-padding">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <!-- Section Tittle -->
-                        <div class="section-tittle text-center mb-80">
-                            <span>Our client testimonials</span>
-                            <h2>What our client say</h2>
-                        </div> 
-                    </div>
-                </div>
-                <div class="row align-items-center">
-                    <div class="col-lg-11 col-md-11">
-                        <div class="h1-testimonial-active">
-                            <!-- Single Testimonial -->
-                            <div class="single-testimonial text-center">
-                                <!-- Testimonial Content -->
-                                <div class="testimonial-caption ">
-                                    <div class="testimonial-top-cap">
-                                        <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis por incididunt ut labore et dolore mas. </p>
-                                    </div>
-                                    <!-- founder -->
-                                    <div class="testimonial-founder d-flex align-items-center justify-content-center mb-30">
-                                        <div class="founder-img">
-                                            <img src="assets/testmonial/Homepage_testi.png" alt="">
-                                        </div>
-                                        <div class="founder-text">
-                                            <span>Oliva jems</span>
-                                            <p>UIX designer</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Single Testimonial -->
-                            <div class="single-testimonial text-center">
-                                <!-- Testimonial Content -->
-                                <div class="testimonial-caption ">
-                                    <div class="testimonial-top-cap">
-                                        <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis por incididunt ut labore et dolore mas. </p>
-                                    </div>
-                                    <!-- founder -->
-                                    <div class="testimonial-founder d-flex align-items-center justify-content-center mb-30">
-                                        <div class="founder-img">
-                                            <img src="assets/testmonial/Homepage_testi.png" alt="">
-                                        </div>
-                                        <div class="founder-text">
-                                            <span>Oliva jems</span>
-                                            <p>UIX designer</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div%>
-        <!-- Testimonial End -->
-        <!-- Subscribe Area Start -->
-        <%#div class="subscribe-area section-bg pt-150 pb-150" data-background="assets/gallery/section_bg04.jpg">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-xl-6 col-lg-8">
-                        <!-- Section Tittle -->
-                        <div class="section-tittle section-tittle2 text-center mb-40">
-                            <span>Subscribe out newslatter</span>
-                            <h2>Subscribe For Newsletter</h2>
-                        </div> 
-                        <!--Hero form -->
-                        <form action="#" class="search-box">
-                            <div class="input-form">
-                                <input type="text" placeholder="What are you looking for?">
-                            </div>
-                            <div class="search-form">
-                                <a href="#">Send Now</a>
-                            </div>	
-                        </form>	
-                    </div>
-                </div>
-            </div>
-        </div%>
-        <!-- Subscribe Area End -->
-        <!-- Blog Ara Start -->
-        <%#div class="home-blog-area section-padding30">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <!-- Section Tittle -->
-                        <div class="section-tittle text-center mb-70">
-                            <span>Our blog</span>
-                            <h2>News and tips</h2>
-                        </div> 
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-team mb-30">
-                            <div class="team-img">
-                                <img src="assets/gallery/home_blog1.png" alt="">
-                            </div>
-                            <div class="team-caption">
-                                <span>HEALTH & CARE</span>
-                                <h3><a href="blog.html">The Best SPA Salons For
-                                    Your Relaxation</a></h3>
-                                <p>October 6, 2020by Steve</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-team mb-30">
-                            <div class="team-img">
-                                <img src="assets/gallery/home_blog2.png" alt="">
-                            </div>
-                            <div class="team-caption">
-                                <span>HEALTH & CARE</span>
-                                <h3><a href="blog.html">The Best SPA Salons For
-                                    Your Relaxation</a></h3>
-                                <p>October 6, 2020by Steve</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-team mb-30">
-                            <div class="team-img">
-                                <img src="assets/gallery/home_blog3.png" alt="">
-                            </div>
-                            <div class="team-caption">
-                                <span>HEALTH & CARE</span>
-                                <h3><a href="blog.html">The Best SPA Salons For
-                                    Your Relaxation</a></h3>
-                                <p>October 6, 2020by Steve</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div%>
-        <!-- Blog Ara End -->
-
     </main>
     <footer>
         <!-- Footer Start-->
