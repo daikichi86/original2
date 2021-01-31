@@ -42,8 +42,8 @@
         <div class="mains-sell-main">
         <h1 class="mains-sell-title">お気に入りの場所を投稿</h1>
   
-        <%= form_with model: @main, local: true do |f| %>
-        <%= render 'shared/error_messages', model: f.object %>
+        <%= form_with model: @main, url: mains_path, local: true do |f| %>
+        <%# render 'shared/error_messages', model: f.object %>
       <%# 投稿画像 %>
           <div class="img-upload">
             <div class="weight-bold-text">
@@ -61,7 +61,7 @@
             <span class="indispensable">必須</span>
           </div>
   
-          <%= f.text_area :name, class:"single-input-primary", id:"item-name", placeholder:"場所の名前（必須 20文字まで)", maxlength:"20" %>
+          <%= f.text_area :name, class:"single-input-primary", placeholder:"場所の名前（必須 20文字まで)", maxlength:"20" %>
   
           <div class="weight-bold-text">
             <div class="info-text">
@@ -70,8 +70,12 @@
             </div>
           </div>
   
-          <%= f.text_area :info, class:"single-input-primary", id:"item-info", placeholder:"どんな場面なのか詳細を書いてみよう。" ,rows:"7" ,maxlength:"1000" %>
-  
+          <%= f.text_area :info, class:"single-input-primary", placeholder:"どんな場面なのか詳細を書いてみよう。" ,rows:"7" ,maxlength:"1000" %>
+
+          <div class="category_country">
+            <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {}) %>
+            <%= f.collection_select(:country_id, Country.all, :id, :name, {}, {}) %>
+          </div>
       <%# 下部ボタン %>
           <div class="sell-btn-contents">
             <%= f.submit "投稿する" ,class:"sell-btn" %>
@@ -86,7 +90,7 @@
 		<!-- All JS Custom Plugins Link Here here -->
         <script src="../../assets/vendor/modernizr-3.5.0.min.js"></script>
 		<!-- Jquery, Popper, Bootstrap -->
-		<script src="../../assets/vendor/jquery-1.12.4.min.js"></script>
+        <script src="../../assets/vendor/jquery-1.12.4.min.js"></script>
         <script src="../../assets/popper.min.js"></script>
         <script src="../../assets/bootstrap.min.js"></script>
     <!-- Jquery Mobile Menu -->
@@ -97,12 +101,12 @@
         <script src="../../assets/slick.min.js"></script>
 		<!-- One Page, Animated-HeadLin -->
         <script src="../../assets/wow.min.js"></script>
-		<script src="../../assets/animated.headline.js"></script>
+        <script src="../../assets/animated.headline.js"></script>
         <script src="../../assets/jquery.magnific-popup.js"></script>
 
 		<!-- Nice-select, sticky -->
         <script src="../../assets/jquery.nice-select.min.js"></script>
-		<script src="../../assets/jquery.sticky.js"></script>
+        <script src="../../assets/jquery.sticky.js"></script>
         
         <!-- contact js -->
         <script src="../../assets/contact.js"></script>
@@ -116,3 +120,4 @@
         <script src="../../assets/main.js"></script>
     </body>
 </html>
+

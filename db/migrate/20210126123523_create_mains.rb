@@ -4,8 +4,6 @@ class CreateMains < ActiveRecord::Migration[6.0]
       t.string :name,              null: false
       t.text :info,              null: false
 
-      t.timestamps
-
       t.references :user, null: false, foreign_key: true
     end
   end

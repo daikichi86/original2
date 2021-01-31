@@ -1,7 +1,7 @@
 class Country < ActiveHash::Base
 
   self.data = [
-               {id: 0, name: '--'}, {id: 1, name: 'アイスランド共和国'}, {id: 2, name: 'アイルランド'}, 
+               {id: 0, name: '国名を指定してくだい'}, {id: 1, name: 'アイスランド共和国'}, {id: 2, name: 'アイルランド'}, 
                {id: 3, name: 'アゼルバイジャン共和国'}, {id: 4, name: 'アフガニスタン・イスラム共和国'}, {id: 5, name: 'アメリカ合衆国'}, 
                {id: 6, name: 'アラブ首長国連邦'}, {id: 7, name: 'アルジェリア民主人民共和国'}, {id: 8, name: 'アルゼンチン共和国'}, 
                {id: 9, name: 'アルバニア共和国'}, {id: 10, name: 'アルメニア共和国'}, {id: 11, name: 'アンゴラ共和国'}, 
@@ -70,4 +70,6 @@ class Country < ActiveHash::Base
                {id: 198, name: 'パレスチナ'}, {id: 199, name: '香港'}, {id: 200, name: 'マカオ'}, 
                {id: 201, name: '北極'}, {id: 202, name: '南極'}
               ]
+              include ActiveHash::Associations
+              has_many :details
 end

@@ -4,7 +4,7 @@
   font-size: 14px;
   display: flex;
   align-items: center;
-  flex-direction: column;
+  flex-direction:column;
   min-width: 500px;
   background-image: url("../../assets/hero/h1_hero.jpg");
   color: #fff;
@@ -13,7 +13,7 @@
 .mains-sell-main {
   width: 70vw;
   min-width: 450px;
-  padding: 10vh 15vw;
+  padding: 5vh 15vw;
 }
 
 .mains-sell-title {
@@ -83,4 +83,11 @@
   padding: 15px;
   text-decoration: none;
   border-radius: 20px;
+}
+
+.category_country{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  color:black;
 }
