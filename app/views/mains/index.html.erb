@@ -46,7 +46,7 @@
                             <!-- Logo -->
                             <div class="col-xl-2 col-lg-2 col-md-1">
                                 <div class="logo">
-                                  <a href="index.html"><img src="assets/logo/logo.png" alt=""></a>
+                                  <%= link_to image_tag("logo/logo.png"), root_path %>
                                 </div>
                             </div>
                             <div class="col-xl-10 col-lg-10 col-md-8">
@@ -54,15 +54,14 @@
                                 <div class="main-menu f-right d-none d-lg-block">
                                     <nav>
                                         <ul id="navigation">                                                                                                                                     
-                                            <li><a href="index.html">Home</a></li>
-                                            <li><a href="#"></a></li>
-                                            <li><%= link_to 'Posted page',pages_path%></li>
+                                            <li><%= link_to 'Home',root_path %></li>
+                                            <li><%= link_to 'Posted page',pages_path %></li>
                                             <li class="login">
                                                 <% if user_signed_in? %>
                                                     <li><%= link_to current_user.nickname, "#", class: "user-nickname" %></li>
                                                     <li><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "logout" %></li>
                                                 <% else %>
-                                                    <li><%= link_to 'Login', new_user_session_path, class: "login2" %></li>
+                                                    <li><%= link_to 'Login', new_user_session_path, class: "login" %></li>
                                                     <li><%= link_to 'Sign up', new_user_registration_path, class: "sign-up" %></li>
                                                 <% end %>
                                             </li>
@@ -383,8 +382,8 @@
                                 <div class="footer-tittle">
                                     <h4>Quick Link</h4>
                                     <ul>
-                                        <li><a href="#">Home</a></li>
-                                        <li><a href="#">Contact</a></li>
+                                        <li><%= link_to 'Home',root_path %></li>
+                                        <li><%= link_to 'Posted page',pages_path %></li>
                                     </ul>
                                 </div>
                             </div>

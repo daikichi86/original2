@@ -1,5 +1,6 @@
 /*メイン画面:投稿ボタン*/
 .purchase-btn {
+  height: 120px;
   width: 120px;
   background: red;
   text-align: center;
@@ -19,6 +20,6 @@
 }
 
 .purchase-btn-icon {
-  width: 60%;
+  width: auto;
 }
 
