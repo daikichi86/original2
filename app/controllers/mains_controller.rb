@@ -13,12 +13,11 @@ class MainsController < ApplicationController
     @main = Maindetail.new(maindetail_params)
     if @main.valid?
       @main.save
-      redirect_to root_path
+      redirect_to pages_path
     else
       render action: :new
     end
   end
-
 
   private
     def maindetail_params

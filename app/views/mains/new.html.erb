@@ -70,7 +70,7 @@
             </div>
           </div>
   
-          <%= f.text_area :info, class:"single-input-primary", placeholder:"どんな場面なのか詳細を書いてみよう。" ,rows:"7" ,maxlength:"1000" %>
+          <%= f.text_area :info, class:"single-input-primary", placeholder:"どんな場面なのか詳細を書いてみよう。(200文字まで)" ,rows:"7" ,maxlength:"200" %>
 
           <div class="category_country">
             <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {}) %>
