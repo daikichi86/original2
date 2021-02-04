@@ -19,7 +19,6 @@ class MainsController < ApplicationController
     end
   end
 
-
   private
     def maindetail_params
       params.require(:maindetail).permit(:image, :name, :info, :category_id, :country_id).merge(user_id: current_user.id)

@@ -109,24 +109,18 @@
                     <%= image_tag page.image.variant(resize: '30x30'), class: 'page-image' if page.image.attached? %>
                     <div class='page-text'>
                       <h3 class='page-name'><%= page.name %></h3>
-                      <%= page.info %>
-                      <div class='star-btn'>
-                        <%= image_tag "star.png", class:"star-icon" %>
-                        <span class='star-count'>0</span>
-                      </div>
+                      <div class='page-info'><%= page.info %></div>
                     </div>
                 </li>
               <% end %>
             <% else %>
                 <li class='list'>
+                <%= link_to '#' do %>
                     <%= image_tag "https://tech-master.s3.amazonaws.com/uploads/curriculums/images/Rails1-4/sample.jpg", class: "page-image" %>
                     <div class='page-text'>
                       <h3 class='page-name'>投稿してね！</h3>
-                      <div class='star-btn'>
-                        <%= image_tag "star.png", class:"star-icon" %>
-                        <span class='star-count'>0</span>
-                      </div>
                     </div>
+                <% end %>
                 </li>
             <% end %>
           </ul>
