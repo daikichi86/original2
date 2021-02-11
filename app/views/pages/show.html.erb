@@ -108,6 +108,14 @@
           <div class='page-img-content'>
             <%= image_tag @main.image ,class:"page-box-img" %>
           </div>
+
+          <% if user_signed_in?  %>
+            <% if current_user.id == @main.user_id %>
+              <%= link_to '投稿の編集', edit_page_path, method: :get, class: "page-red-btn" %>
+              <p class='or-text'>or</p>
+              <%= link_to '投稿の削除', page_path, method: :delete, class:'page-destroy' %>
+            <% end %>
+          <% end %>
       
           <div class="page-explain-box">
             <span><%= @main.info %></span>
