@@ -11,10 +11,6 @@ class PagesController < ApplicationController
   end
 
   def edit
-    main = Main.find(params[:id])
-    detail = Detail.find(@main.id)
-    @main_form = maindetail.new
-    binding.pry
   end
 
   def update
@@ -33,7 +29,7 @@ class PagesController < ApplicationController
 
     def main_find
       @main = Main.find(params[:id])
-      @detail = Detail.find(@main.id)
+      @detail = @main.detail
     end
 
 end
